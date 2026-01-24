@@ -1,0 +1,260 @@
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "spartan", sans-serif;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu, summary {
+    list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+    counter-reset: revert;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+    display: none;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+button.normal {
+    font-size: 40px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3e6f3;
+}
+
+.header .logo {
+    border-radius: 50%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* list items */
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+/* list links */
+#navbar li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+/* on hover */
+#navbar li a:hover {
+    color: #088178;
+}
+
+/* header image */
+.header img {
+    height: 50px;
+    width: 50px;
+}
+
+
+
+/* hero section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+    height: 90vh;
+    background-image: url("../images/hero4.png");
+    background-position: top 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero h1 {
+    color: #088178;
+}
+
+#hero button {
+    background-color: transparent;
+    background-image: url("../images/button.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* features section */
+#features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#features .fe-box{
+    border: 1px rgb(167, 164, 164) solid;
+    border-radius: 3px;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#features .fe-box:hover {
+    box-shadow: 0 0 3px 3px rgb(221, 221, 223);
+}
+#features .fe-box h6{
+    background-color: #cce7d0;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+#features .fe-box:nth-child(2) h6 {
+    background-color: blueviolet;
+} 
+
+#features .fe-box:nth-child(3) h6 {
+    background-color: rgb(210, 241, 159);
+} 
+
+#features .fe-box:nth-child(4) h6 {
+    background-color: rgb(113, 66, 156);
+} 
+
+#features .fe-box:nth-child(5) h6 {
+    background-color: rgb(211, 192, 82);
+} 
+#features .fe-box:nth-child(6) h6 {
+    background-color: rgb(91, 150, 177);
+} 
+
+
+#product1 .pro-container {
+    display: flex;
+    flex-direction: column;
+    color: #555
+}
