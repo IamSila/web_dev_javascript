@@ -12,14 +12,15 @@
  */
 
 // a function called sum which returns the sum of two numbers
-
+// return value - answer returned when we call a function.
 function sum_of_two_numbers(a, b)
 {
     const result = a + b;
-    return (result);
+    console.log (result);
 }
-
+// 40 and also undefined
 console.log(sum_of_two_numbers(10, 30));
+console.log(console.log(10));
 
 // create a function that prints your name on the screen
 // fucntion name_of_function(parameters)
@@ -84,10 +85,56 @@ function createAccount(username = 'Anonymous', age = 18) {
 
 console.log(createAccount());           // Output: Username: Anonymous, Age: 18
 console.log(createAccount('John'));     // Output: Username: John, Age: 18 (age uses default)
-console.log(createAccount('John', 25));
+console.log(createAccount('John', 25)); // function call 
 
 
 
-// comment skkalfal
+// parameter - They are variables passed during function declaration which are used to store the arguments we pass during function call.
+//
+// during function call we can pass the arguments as values or as references.
+// references -> memory location (varibles - memory location that stores value)
+// pass by value
+// pass by reference
+function multiply(a, b)
+{
+    return (a * b);
+}
+function argument1(x, y)
+{
+    return (x + y);
+}
+function seven()
+{
+    return (7);
+}
+const argument2 = 20;
+console.log(multiply(argument1(seven(), 5), argument2));
+
+sum(8,9)
+
+
+
+
+
+
+// create a function of your choice that takes 2 parameters as numbers.
+// call it and pass the argument by value
+// confirm if it works by running it
+// call it again and pass the argument by reference.
+// confirm if it runs.
+// for the first argument of the funcion (sum(5, 6)), create another function that returns that number and pass it to your function i.e sum
+// confirm if your function call works.
+
+// 
+
+
+
+
+
+
+
+
+
+
 
 
