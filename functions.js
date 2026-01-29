@@ -110,7 +110,7 @@ function seven()
 const argument2 = 20;
 console.log(multiply(argument1(seven(), 5), argument2));
 
-sum(8,9)
+
 
 
 
@@ -125,7 +125,58 @@ sum(8,9)
 // for the first argument of the funcion (sum(5, 6)), create another function that returns that number and pass it to your function i.e sum
 // confirm if your function call works.
 
-// 
+/**
+ * fxn_name  - divider
+ * purpose - to divide 2 numbers and give us the answer.
+ * return value - the answer after dividing the 2 numbers
+ *
+ * creating the function
+ * - step1 is function declaration - functiion name and any parameter
+ *   parameters r and t will store the 2 numbers we pass during function call
+ * - step 2 is function definition | defining the body of the function
+ */
+
+function divider(r, t)
+{
+    if (r < 0)
+    {
+        r = -r;
+    }
+    if (t < 0)
+    {
+        t = -t;
+    }
+        
+    const result = r / t;
+    for (let i = 0; i < result; i++)
+    {
+        console.log("*");
+    }
+    return (result);
+}
+
+const value1 = 30;
+const value2 = 10;
+
+function firstNumber(number)
+{
+    return (number);
+}
+
+function secondNumber(number)
+{
+    return (number);
+}
+function hundred()
+{
+    return (100);
+}
+const answer = divider(firstNumber(hundred()), secondNumber(hundred()));
+console.log(answer);
+
+
+
+
 
 
 
