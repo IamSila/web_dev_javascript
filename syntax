@@ -1,0 +1,45 @@
+/**
+end all statements with a semicolon
+It is case sensitive [Keywords and the variables]
+js has alot of keywords [const, let, for, in, promise, .............]
+brackets change how statements are evaluated
+Statement - a line of code that does something
+expression - it is a composition of an operand operator and operand that evaluates to a value
+5 + 5 evaluates to 10
+javascript ignores the white space. For neatness and easy readability
+
+
+comments
+single line - // 
+multi line - /*   commment */
+
+- label our code
+- useful when debugging
+- If you comment the line will not be executed it will be ignored
+
+*/
+
+const name = "Javascript";
+Name = "another value"
+name, Name, NAme, namE
+
+const name = ("javascript")
+
+
+let x = 5 // initialized variable
+let x // unitialized.
+// undecleared undeined
+
+
+function sum()
+{
+
+}
+
+
+let name = 8;
+let name = "another"
+
+
+
+

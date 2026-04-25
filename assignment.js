@@ -1,38 +1,15 @@
-const User = {
-    name: "Alex",
-    //key: value
-    age: 20,
-    isStudent: false,
-}
 
-const name = ""
-// how do you print the user's name
-console.log(User.name);
-console.log(User.age);
+/**
+ * first for loop is for creating 10 rows.
+    * second for loop prints the starts 
+    */
 
-// if the user is a student, print you are a student
-if(User.isStudent === true)
+for (let row = 1; row <= 10; row++)
 {
-    console.log("you are a student");
+    let stars = "";
+    for (let i = 1; i <= row; i++)
+    {
+        stars += "*";
+    }
+    console.log(stars);
 }
-else
-{
-    console.log("you are not a student");
-}
-
-
-// how do you add a grade property to the User object
-// user.newproperty = value
-User.grade = "A";
-console.log(User.grade);
-
-// how do you update age to 21
-// = -> assignment operator
-// === -> comparison operators
-console.log(User.age); // 20
-User.age = 21;
-console.log(User.age); // 21
-
-// how do you delete isStudent
-delete User.isStudent;
-console.log(User.isStudent);
