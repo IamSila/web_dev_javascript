@@ -22,13 +22,6 @@
 
 
 
-
-for (let i = 1; i <= 10; i--)
-{
-  console.log("My name is Maryam");
-}
-
-
 /** use a while loop to print your name 10 times 
  *
  *pseudocode
@@ -42,12 +35,24 @@ for (let i = 1; i <= 10; i--)
  infinity loop - this loop does not terminate and it is caused by the condition never having to evaluate to false.
 
 
-while_loops.js
+ while_loops.js
  * */
+
+
 
 let names = ["Maryam", "Cate", "Alex", "Henry", "James", "John"]
 
 // print the above six name using a while loop.
 // print only Maryam and Cate     ------> break
 // Print Maryam, Henry, James, John. -------> continue
+
+let numbers = [1, 2,3, 4, 5, 6,7, 8, 9];
+
+
+let index = 0;
+while (index < numbers.length)
+{
+  console.log(numbers[index])
+  index = index + 1;
+}
 
