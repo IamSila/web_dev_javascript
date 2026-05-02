@@ -71,3 +71,9 @@ console.log('We are "Vikings"');
 
 /** the escape character is the backslash \ */ 
 console.log("We are the \"Vikings\"");
+
+// backticks help us to achieve multi line strings .
+let message = `Hello Maryam,
+  you are
+  learning js
+  `;
