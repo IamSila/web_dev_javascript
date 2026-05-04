@@ -62,3 +62,23 @@ Sum_of_array_elements(array_numbers);
 
 
 
+// creating a function using method 1
+function sum(a, b)
+  {
+  const results = a + b;
+  return results;
+}
+
+// creating a function using method 2
+const sum = function(a, b) 
+{
+    const results = a + b;
+    return results;
+  }
+sum(1,2)
+
+// arrow functions method 3
+const sum = (a, b) => {
+  const results = a + b;
+  return results;
+}
